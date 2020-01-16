@@ -1,10 +1,8 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import Panel from '../components/Panel/Panel';
 
-describe('<Panel />', () => {
-	it('renders without crashing', () => {
-		shallow(<Panel />);
-	});
+test('Panel renders without crashing', () => {
+	render(<Panel />);
 });
