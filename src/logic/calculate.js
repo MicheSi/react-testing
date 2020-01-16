@@ -10,11 +10,11 @@ import operate from './operate';
  *   operation:String  +, -, etc.
  */
 
-function isNumber(x) {
+export function isNumber(x) {
     return !!x.match(/[0-9]+/);
 }
 
-function calculate(obj, buttonName) {
+export function calculate(obj, buttonName) {
     if (buttonName === 'AC') {
         return {
             total: null,

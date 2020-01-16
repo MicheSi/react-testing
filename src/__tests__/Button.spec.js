@@ -1,10 +1,14 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import Button from '../components/Button/Button';
 
-describe('<Button />', () => {
-	it('renders without crashing', () => {
-		shallow(<Button />);
-	});
+test('Button renders without crashing', () => {
+	render(<Button />);
 });
+
+test('Buttons are rendering', () => {
+	const {getByTestId} = render(<Button />);
+
+	getByTestId(/buttons/i);
+})

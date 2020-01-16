@@ -1,10 +1,14 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import Display from '../components/Display/Display';
 
-describe('<Display />', () => {
-	it('renders without crashing', () => {
-		shallow(<Display />);
-	});
+test('Display renders without crashing', () => {
+	render(<Display />);
 });
+
+test ('Value is rendering in display', () => {
+	const {getByTestId} = render(<Display />);
+
+	getByTestId(/valuedisplay/i);
+})
