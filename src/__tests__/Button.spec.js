@@ -6,3 +6,9 @@ import Button from '../components/Button/Button';
 test('Button renders without crashing', () => {
 	render(<Button />);
 });
+
+test('Buttons are rendering', () => {
+	const {getByTestId} = render(<Button />);
+
+	getByTestId(/buttons/i);
+})
